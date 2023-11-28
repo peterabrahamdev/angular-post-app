@@ -16,6 +16,10 @@
     align-items: center;
     color: #ece1fa;
   }
+
+  .logo a{
+    cursor: pointer;
+  }
   
   .button {
     display: inline-flex;

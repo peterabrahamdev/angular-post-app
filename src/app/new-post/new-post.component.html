@@ -1,1 +1,17 @@
-<p>new-post works!</p>
+<app-modal>
+  <form method="post" class="form">
+    <p>
+      <label for="body">Text</label>
+      <textarea id="body" name="body" required rows="3"></textarea>
+    </p>
+    <p>
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="author" required />
+    </p>
+    <p class="actions">
+      <a routerLink="/" type="button">Cancel</a>
+      <button type="submit">Submit</button>
+    </p>
+  </form>
+</app-modal>
+    
