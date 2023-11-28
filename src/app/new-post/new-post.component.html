@@ -1,17 +1,17 @@
-<app-modal>
-  <form method="post" class="form">
+<!-- <app-modal> -->
+  <form method="post" class="form" [formGroup]="newPostForm" (ngSubmit)="handleSumbit()">
     <p>
       <label for="body">Text</label>
-      <textarea id="body" name="body" required rows="3"></textarea>
+      <textarea id="body" name="body" rows="3" formControlName="text"></textarea>
     </p>
     <p>
       <label for="name">Your name</label>
-      <input type="text" id="name" name="author" required />
+      <input type="text" id="name" name="author" formControlName="name" />
     </p>
+    <p></p>
     <p class="actions">
       <a routerLink="/" type="button">Cancel</a>
-      <button type="submit">Submit</button>
+      <button [disabled]="!newPostForm.valid">Submit</button>
     </p>
   </form>
-</app-modal>
-    
+<!-- </app-modal> -->
